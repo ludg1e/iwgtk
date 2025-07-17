@@ -109,6 +109,10 @@ void window_launch() {
 	    gtk_box_append(GTK_BOX(known_network_button_vbox), close_button);
 	}
 
+	GtkWidget *spacer = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
+	gtk_widget_set_size_request(spacer, -1, 3);
+	gtk_box_append(GTK_BOX(known_network_button_vbox), spacer);
+
 	gtk_box_append(GTK_BOX(known_network_button_vbox), window->known_network_button);
     }
 
