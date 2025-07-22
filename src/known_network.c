@@ -133,6 +133,7 @@ KnownNetwork* known_network_add(Window *window, GDBusObject *object, GDBusProxy 
     gtk_widget_set_hexpand(name_box, TRUE);
 
     gtk_widget_set_halign(name_box,                  GTK_ALIGN_START);
+    gtk_widget_set_valign(name_box,                  GTK_ALIGN_CENTER);
     gtk_widget_set_halign(kn->name_label,            GTK_ALIGN_START);
     gtk_widget_set_halign(kn->hidden_label,          GTK_ALIGN_START);
 
