@@ -151,7 +151,7 @@ Device* device_add(Window *window, GDBusObject *object, GDBusProxy *proxy) {
     device->table = gtk_grid_new();
     g_object_ref_sink(device->table);
 
-	device->networks_box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
+    device->networks_box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
     g_object_ref_sink(device->networks_box);
 
     gtk_box_append(GTK_BOX(device->master), device->table);
@@ -206,8 +206,8 @@ Device* device_add(Window *window, GDBusObject *object, GDBusProxy *proxy) {
 	gtk_grid_set_column_spacing(GTK_GRID(device->table), 3);
     }
 
-	GtkWidget *scroller = gtk_srolled_window_new();
-	gtk_widget_set_hexpand(scroller, TRUE);
+    GtkWidget *scroller = gtk_srolled_window_new();
+    gtk_widget_set_hexpand(scroller, TRUE);
     gtk_widget_set_vexpand(scroller, TRUE);
     gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scroller), GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
     gtk_scrolled_window_set_child(GTK_SCROLLED_WINDOW(scroller), device->networks_box);
